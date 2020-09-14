@@ -25,9 +25,9 @@ node(NODE_MASTER) {
     def PRODUCT = "${params.PRODUCT}"
     def VERSION = "${params.VERSION}"
     def DEPLOYMENT_PATTERN = "${env.DEPLOYMENT_PATTERN}"
-    def PROD = "IAM_Production"
-    def STAGING = "IAM_Staging"
-    def DEV = "IAM_Develop"
+    def PROD = "IAM-Production"
+    def STAGING = "IAM-Staging"
+    def DEV = "IAM-Develop"
     //Stacks
     def STACK_STAGING = "staging"
     def STACK_PROD = "production"
@@ -45,7 +45,7 @@ node(NODE_MASTER) {
     //Return Keys
     def TEST_ENDPOINT_KEY = "HttpURL"
     //Directories
-    def DEPLOYMENT_DIR = "IAM_deployment"
+    def DEPLOYMENT_DIR = "IAM-deployment"
     def CONF_HOME_DIR = "configs"
     def ARTIFACTS_DIR = "cicd-test-artifacts"
     def PIPELINE_RESOURCES_DIR = "resources"
@@ -64,7 +64,7 @@ node(NODE_MASTER) {
     def PACKER_MANIFEST = "${WORKSPACE}/${PIPELINE_RESOURCES_DIR}/scripts/packer/manifest.json"
     def PACKER_JSON = "${WORKSPACE}/${PIPELINE_RESOURCES_DIR}/scripts/packer/packer.json"
     //repos
-    def GIT_REPO_RESOURCES = 'https://github.com/testuser13407/aws-pipeline'
+    def GIT_REPO_RESOURCES = 'https://github.com/testuser13407/aws-pipeline.git'
     //mvn remove download logs
     def REMOVE_LOGS = 'org.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
     def date = new Date()
